@@ -1,6 +1,12 @@
 package com.github.paulohsm.cadpessoa.entities;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "tb_pessoa")
 public class Pessoa {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
     private String email;
